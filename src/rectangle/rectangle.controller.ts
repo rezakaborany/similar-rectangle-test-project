@@ -1,9 +1,9 @@
 import { Controller, Post, Get, Body } from '@nestjs/common';
-import { Rectangle } from './rectangle.entity';
 import { RectangleService } from './rectangle.service';
 import { IRectangle } from './interface/rectangle.interface';
 import { RectangleInputDto } from './dto/rectangle.dto';
 import { ApiBody, ApiResponse } from '@nestjs/swagger';
+import { Rectangle } from './entity/rectangle.entity';
 
 @Controller('rectangles')
 export class RectangleController {
