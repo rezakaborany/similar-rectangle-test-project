@@ -17,7 +17,7 @@ export class RectangleService {
             const { input, main } = body;
             // Filter input rectangles that have common areas with main rectangle
             const filteredRectangles = input.filter((rectangle) => this.checkCommonRectangles(main, rectangle));
-            // Save filtered rectangles (or use batch saving if needed)
+            // Save filtered rectangles
             await Promise.all(filteredRectangles.map((rectangle) => this.rectangleRepository.save(rectangle)));
             return filteredRectangles;
         } catch (err) {
